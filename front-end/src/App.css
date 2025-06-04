@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.name-ul {
+  background-color: #1976d2;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.name-ul li {
+  display: inline-block;
+  padding: 15px 100px;
+}
+
+.name-ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.name-ul li a:hover {
+  background-color: #ffffff;
+  color: #1976d2;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.footercss {
+  padding: 12px;
+  color: #ffffff;
+  background-color: #1976d2;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.content,
+.addpro-content {
+  width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.Inputbox {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.submitbutton,
+.submitprobutton {
+  width: 100%;
+  padding: 12px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.submitbutton:hover,
+.submitprobutton:hover {
+  background-color: #1565c0;
+}
+
+.invalid-input {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Fixed row alignment for product cards */
+.productlist {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 3000px;
+}
+
+.productlist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.productlist ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  width: 170px;
+  height: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.productlist ul li h3,
+.productlist ul li p {
+  margin: 5px 0;
+}
+
+.deleteprobutton {
+  margin-top: 10px;
+  background-color: #1976d2;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.updateprobutton {
+  margin-top: 10px;
+  background-color: #1976d2;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.updateprobutton:hover {
+  background-color: #d32f2f;
+  text-decoration: none;
+}
+
+.deleteprobutton:hover {
+  background-color: #d32f2f;
+}
+
+.searchbox {
+  width: 80%;
+  padding: 12px;
+  height: 50px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* 👤 Profile Page Styling */
+.profile-content {
+  width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.profile-content h1 {
+  text-align: center;
+  color: #1976d2;
+  margin-bottom: 20px;
+}
+
+.profile-content p {
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
