@@ -140,6 +140,5 @@ function verifytoken(req, resp, next) {
     }
 }
 
-app.listen(5400, () => {
-    console.log("🚀 Server running on http://localhost:5400");
-});
+const PORT = process.env.PORT || 5400;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
