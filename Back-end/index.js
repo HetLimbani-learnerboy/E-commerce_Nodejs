@@ -26,7 +26,6 @@ const insertindb = async () => {
         company: String
     });
 
-    // Define Models
     const User = mongoose.model('users', userSchema);
     const Product = mongoose.model('products', productSchema);
 

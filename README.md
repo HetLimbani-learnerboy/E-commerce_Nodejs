@@ -1,6 +1,34 @@
 # E-commerce_Nodejs
 A basic E-commerce website built using React, Node.js, CSS, and MongoDB for backend data storage.
 
+## Features
+- User authentication (Signup/Login)
+- Product management (Add/Update/Delete)
+- Profile management
+- Responsive design
+- Protected routes
+- Dynamic product listing
+- User-friendly navigation
+
+## Tech Stack
+- Frontend: React.js, CSS3
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Authentication: JWT (JSON Web Tokens)
+
+## Project Structure
+```
+E-commerce_Nodejs/
+├── Back-end/           # Node.js server code
+│   ├── index.js        # Server entry point
+│   └── package.json    # Backend dependencies
+└── front-end/          # React application
+    ├── public/         # Static files
+    └── src/            # Source code
+        ├── components/ # React components
+        └── styles/     # CSS styles
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
