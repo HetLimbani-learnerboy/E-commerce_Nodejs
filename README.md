@@ -25,8 +25,8 @@ E-commerce_Nodejs/
 └── front-end/          # React application
     ├── public/         # Static files
     └── src/            # Source code
-        ├── components/ # React components
-        └── styles/     # CSS styles
+        ├── Pages       # React pages (Addproducts.js, Productlist.js etc..)
+        └── App.css     # CSS styles
 ```
 
 # Getting Started with Create React App
