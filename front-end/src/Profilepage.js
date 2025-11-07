@@ -3,41 +3,74 @@ import React, { useEffect, useState } from "react";
 const Profilepage = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [error, setError] = useState("");
 
     useEffect(() => {
         const fetchProfile = async () => {
-            const userData = JSON.parse(localStorage.getItem("users"));
-            if (userData && userData._id) {
-                let result = await fetch(`http://localhost:5400/profile?id=${userData._id}`, {
+            const storedUser = localStorage.getItem("users");
+            const token = localStorage.getItem("token");
+
+            if (!storedUser || !token) {
+                setError("No user session found. Please log in first.");
+                return;
+            }
+
+            let userData;
+            try {
+                userData = JSON.parse(storedUser);
+            } catch (err) {
+                console.error("❌ Error parsing user data:", err);
+                setError("Corrupted user data. Please log in again.");
+                localStorage.removeItem("users");
+                localStorage.removeItem("token");
+                return;
+            }
+
+            if (!userData._id) {
+                setError("User ID missing. Please log in again.");
+                return;
+            }
+
+            try {
+                const result = await fetch(`http://localhost:5400/profile?id=${userData._id}`, {
                     headers: {
-                        Authorization: `Bearer ${localStorage.getItem("token")}`
-                    }
+                        Authorization: `Bearer ${token}`,
+                    },
                 });
 
                 if (result.ok) {
-                    let user = await result.json();
-                    if (user && user.name && user.email) {
+                    const user = await result.json();
+                    if (user?.name && user?.email) {
                         setName(user.name);
                         setEmail(user.email);
+                    } else {
+                        setError("Invalid user data received.");
                     }
                 } else {
-                    console.error("Failed to fetch profile:", result.status, result.statusText);
+                    setError(`Failed to fetch profile: ${result.statusText}`);
                 }
+            } catch (networkErr) {
+                console.error("Network error:", networkErr);
+                setError("Network error while fetching profile.");
             }
         };
+
         fetchProfile();
     }, []);
 
     return (
         <div className="profile-content">
             <h1>Profile Page</h1>
-            {name && email ? (
+
+            {error ? (
+                <p style={{ color: "red" }}>{error}</p>
+            ) : name && email ? (
                 <div>
                     <p><strong>Username:</strong> {name}</p>
                     <p><strong>Email:</strong> {email}</p>
                 </div>
             ) : (
-                <p>No user data available. Please log in.</p>
+                <p>Loading user data...</p>
             )}
         </div>
     );

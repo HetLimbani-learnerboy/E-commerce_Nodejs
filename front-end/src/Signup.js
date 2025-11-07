@@ -5,7 +5,7 @@ const Signup = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState(false); 
+    const [error, setError] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -32,17 +32,19 @@ const Signup = () => {
         }
 
         let result = await fetch("http://localhost:5400/register", {
-            method: 'post',
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, password }),
-            headers: {
-                'Content-type': "application/json"
-            }
         });
+
         result = await result.json();
-        localStorage.setItem("users", JSON.stringify(result.result)); // Corrected spelling
-        localStorage.setItem("token", result.auth); // Corrected spelling
-        if (result) {
+
+        if (result.auth && result.user) {
+            localStorage.setItem("users", JSON.stringify(result.user));
+            localStorage.setItem("token", result.auth);
             navigate('/');
+        } else {
+            alert("Registration failed. Please try again.");
         }
     };
 
