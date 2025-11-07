@@ -17,7 +17,7 @@ const Updateproduct = () => {
     const getproductdetails = async () => {
         let result = await fetch(`http://localhost:5400/products/${params.id}`, {
             headers: {
-                Authorization: `Bearer ${localStorage.getItem("token")}` // Added Authorization header
+                Authorization: `Bearer ${localStorage.getItem("token")}` 
             }
         });
         result = await result.json();
@@ -37,13 +37,13 @@ const Updateproduct = () => {
             body: JSON.stringify({ name, price, category, company }),
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${localStorage.getItem("token")}` // Added Authorization header
+                Authorization: `Bearer ${localStorage.getItem("token")}` 
             }
         });
         result = await result.json();
         if (result) {
             alert("Product updated successfully");
-            navigate('/'); // Redirect to the product list or home page
+            navigate('/');
         }
     };
 

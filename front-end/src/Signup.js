@@ -5,7 +5,7 @@ const Signup = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState(false); // State to track validation errors
+    const [error, setError] = useState(false); 
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const Signup = () => {
 
     const collectData = async () => {
         if (!name || !email || !password) {
-            setError(true); // Set error to true if any field is empty
+            setError(true);
             return;
         }
 

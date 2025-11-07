@@ -19,11 +19,11 @@ const AddProducts = () => {
             body: JSON.stringify({ name, price, category, company }),
             headers: {
                 'Content-Type': "application/json",
-                Authorization: `Bearer ${localStorage.getItem("token")}` // Added Authorization header
+                Authorization: `Bearer ${localStorage.getItem("token")}` 
             }
         });
 
-        result = await result.json(); // Await the JSON parsing
+        result = await result.json(); 
         console.warn(result);
 
         if (result) {

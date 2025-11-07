@@ -5,7 +5,6 @@ body {
   color: #333;
 }
 
-/* ---------- NAVBAR ---------- */
 .name-ul {
   background-color: #1976d2;
   padding: 0;
@@ -34,7 +33,6 @@ body {
   border-radius: 5px;
 }
 
-/* ---------- FOOTER ---------- */
 .footercss {
   padding: 1px;
   color: #ffffff;
@@ -47,7 +45,6 @@ body {
   font-size: 15px;
 }
 
-/* ---------- FORM CONTENT BOX ---------- */
 .content,
 .addpro-content {
   width: 400px;
@@ -106,7 +103,6 @@ body {
   color: #1976d2;
 }
 
-/* Search bar */
 .searchbox {
   width: 80%;
   padding: 12px;
@@ -117,7 +113,6 @@ body {
   font-size: 15px;
 }
 
-/* Table header and rows */
 .productlist ul {
   list-style: none;
   padding: 1rem 0.5rem;
@@ -151,7 +146,6 @@ body {
   border-right: none;
 }
 
-/* Buttons */
 .deleteprobutton,
 .updateprobutton {
   background-color: #1976d2;
@@ -170,7 +164,6 @@ body {
   background-color: #d32f2f;
 }
 
-/* ---------- PROFILE PAGE ---------- */
 .profile-content {
   width: 400px;
   margin: 100px auto;
@@ -193,7 +186,6 @@ body {
   line-height: 1.5;
 }
 
-/* ---------- RESPONSIVE DESIGN ---------- */
 @media (max-width: 1024px) {
   .name-ul li {
     padding: 12px 60px;

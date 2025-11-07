@@ -10,7 +10,7 @@ const Profilepage = () => {
             if (userData && userData._id) {
                 let result = await fetch(`http://localhost:5400/profile?id=${userData._id}`, {
                     headers: {
-                        Authorization: `Bearer ${localStorage.getItem("token")}` // Added Authorization header
+                        Authorization: `Bearer ${localStorage.getItem("token")}`
                     }
                 });
 

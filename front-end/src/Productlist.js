@@ -12,7 +12,7 @@ const Productlist = () => {
         try {
             let result = await fetch("http://localhost:5400/products", {
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}` // Added Authorization header
+                    Authorization: `Bearer ${localStorage.getItem("token")}` 
                 }
             });
 
@@ -32,7 +32,7 @@ const Productlist = () => {
             let result = await fetch(`http://localhost:5400/products/${name}`, {
                 method: 'delete',
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}` // Added Authorization header
+                    Authorization: `Bearer ${localStorage.getItem("token")}` 
                 }
             });
 
@@ -51,7 +51,7 @@ const Productlist = () => {
             if (key) {
                 let result = await fetch(`http://localhost:5400/search/${key}`, {
                     headers: {
-                        Authorization: `Bearer ${localStorage.getItem("token")}` // Added Authorization header
+                        Authorization: `Bearer ${localStorage.getItem("token")}` 
                     }
                 });
 
@@ -79,8 +79,6 @@ const Productlist = () => {
                             <li>Product Price</li>
                             <li>Product Category</li>
                             <li>Product Company</li>
-                            {/* <li>Update Operation</li>
-                            <li>Delete Operation</li> */}
                         </ul>
 
                         {
@@ -92,8 +90,6 @@ const Productlist = () => {
                                         <li>{item.price}</li>
                                         <li>{item.category}</li>
                                         <li>{item.company}</li>
-                                        {/* <li className="deletecol"><Link to={`/update/${item._id}`}><button className="updateprobutton">Update</button></Link></li>
-                                        <li className="deletecol"><button className="deleteprobutton" onClick={() => deleteitem(item.name)}>Delete</button></li> */}
                                     </ul>
                                 )
                             })

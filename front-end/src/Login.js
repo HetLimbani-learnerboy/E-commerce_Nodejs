@@ -26,8 +26,8 @@ const Login = () => {
 
         if (result.auth) {
             localStorage.setItem("users", JSON.stringify(result.user));
-            localStorage.setItem("token", result.auth); // Store the token in localStorage
-            navigate('/'); // Redirect to the home page
+            localStorage.setItem("token", result.auth); 
+            navigate('/'); 
         } else {
             alert("Please check your information");
         }
