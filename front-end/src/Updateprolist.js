@@ -11,7 +11,7 @@ const Updateprolist = () => {
     const getproduct = async () => {
         let result = await fetch("http://localhost:5400/products", {
             headers: {
-                Authorization: `Bearer ${localStorage.getItem("token")}` // Added Authorization header
+                Authorization: `Bearer ${localStorage.getItem("token")}`
             }
         });
         let data = await result.json();
@@ -22,7 +22,7 @@ const Updateprolist = () => {
         let result = await fetch(`http://localhost:5400/products/${name}`, {
             method: 'delete',
             headers: {
-                Authorization: `Bearer ${localStorage.getItem("token")}` // Added Authorization header
+                Authorization: `Bearer ${localStorage.getItem("token")}` 
             }
         });
         result = await result.json();
@@ -36,7 +36,7 @@ const Updateprolist = () => {
         if (key) {
             let result = await fetch(`http://localhost:5400/search/${key}`, {
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}` // Added Authorization header
+                    Authorization: `Bearer ${localStorage.getItem("token")}` 
                 }
             });
             let data = await result.json();
