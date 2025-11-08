@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-const API_BASE = process.env.VITE_API_URL || "";
+const API_BASE = process.env.REACT_APP_API_UR || "";
 
 const Signup = () => {
     const [name, setName] = useState("");
