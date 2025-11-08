@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 const Updateprolist = () => {
     const [product, setProduct] = React.useState([]);
@@ -10,7 +11,7 @@ const Updateprolist = () => {
 
     const getproduct = async () => {
         // let result = await fetch("http://localhost:5400/products", {
-        let result = await fetch("https://e-commerce-nodejs-lk6n.onrender.com/products", {
+        let result = await fetch(`${API_BASE}/products`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`
             }
@@ -21,7 +22,7 @@ const Updateprolist = () => {
 
     const deleteitem = async (name) => {
         // let result = await fetch(`http://localhost:5400/products/${name}`, {
-        let result = await fetch(`https://e-commerce-nodejs-lk6n.onrender.com/products/${name}`, {
+        let result = await fetch(`${API_BASE}/products/${name}`, {
             method: 'delete',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}` 
@@ -37,7 +38,7 @@ const Updateprolist = () => {
         let key = event.target.value;
         if (key) {
             // let result = await fetch(`http://localhost:5400/search/${key}`, {
-            let result = await fetch(`https://e-commerce-nodejs-lk6n.onrender.com/search/${key}`, {
+            let result = await fetch(`${API_BASE}/search/${key}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}` 
                 }

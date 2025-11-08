@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 const Login = () => {
     const [email, setEmail] = React.useState('');
@@ -15,7 +16,7 @@ const Login = () => {
 
     const handlelogin = async () => {
         // let result = await fetch("http://localhost:5400/login", {
-        let result = await fetch("https://e-commerce-nodejs-lk6n.onrender.com/login", {
+        let result = await fetch(`${API_BASE}/login`, {
             method: 'post',
             body: JSON.stringify({ email, password }),
             headers: {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 const Signup = () => {
     const [name, setName] = useState("");
@@ -32,7 +33,7 @@ const Signup = () => {
         }
 
         // let result = await fetch("http://localhost:5400/register", {
-        let result = await fetch("https://e-commerce-nodejs-lk6n.onrender.com/register", {
+        let result = await fetch(`${API_BASE}/register`, {
 
             method: 'POST',
             headers: { "Content-Type": "application/json" },
