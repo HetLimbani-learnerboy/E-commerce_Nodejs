@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import express from 'express';
 import cors from 'cors';
-import JWT from 'jsonwebtoken';
+import Jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 dotenv.config();
 
