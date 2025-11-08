@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-const API_BASE = process.env.REACT_APP_API_UR || "";
 
 const Updateprolist = () => {
     const [product, setProduct] = React.useState([]);
