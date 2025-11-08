@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-const API_BASE = import.meta.env.VITE_API_URL || "";
+const API_BASE = process.env.VITE_API_URL || "";
 
 const Login = () => {
     const [email, setEmail] = React.useState('');
