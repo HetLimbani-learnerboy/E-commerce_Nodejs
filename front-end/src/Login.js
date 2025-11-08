@@ -16,7 +16,7 @@ const Login = () => {
 
     const handlelogin = async () => {
         // let result = await fetch("http://localhost:5400/login", {
-        let result = await fetch(`${API_BASE}/login`, {
+        let result = await fetch(`${API_BASE}/api/login`, {
             method: 'post',
             body: JSON.stringify({ email, password }),
             headers: {

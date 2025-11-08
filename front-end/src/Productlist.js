@@ -11,7 +11,7 @@ const Productlist = () => {
     const getproduct = async () => {
         try {
             // let result = await fetch("http://localhost:5400/products", {
-            let result = await fetch(`${API_BASE}/products`, {
+            let result = await fetch(`${API_BASE}/api/products`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}` 
                 }
@@ -33,7 +33,7 @@ const Productlist = () => {
         try {
             if (key) {
                 // let result = await fetch(`http://localhost:5400/search/${key}`, {
-                let result = await fetch(`${API_BASE}/search/${key}`, {
+                let result = await fetch(`${API_BASE}/api/search/${key}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}` 
                     }

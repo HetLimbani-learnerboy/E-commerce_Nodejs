@@ -16,7 +16,7 @@ const AddProducts = () => {
 
         console.warn(name, price, category, company);
         // let result = await fetch("http://localhost:5400/addproduct", {
-        let result = await fetch(`${API_BASE}/addproduct`, {
+        let result = await fetch(`${API_BASE}/api/addproduct`, {
             method: 'post',
             body: JSON.stringify({ name, price, category, company }),
             headers: {

@@ -22,7 +22,7 @@ const Updateprolist = () => {
 
     const deleteitem = async (name) => {
         // let result = await fetch(`http://localhost:5400/products/${name}`, {
-        let result = await fetch(`${API_BASE}/products/${name}`, {
+        let result = await fetch(`${API_BASE}/api/products/${name}`, {
             method: 'delete',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}` 
@@ -38,7 +38,7 @@ const Updateprolist = () => {
         let key = event.target.value;
         if (key) {
             // let result = await fetch(`http://localhost:5400/search/${key}`, {
-            let result = await fetch(`${API_BASE}/search/${key}`, {
+            let result = await fetch(`${API_BASE}/api/search/${key}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}` 
                 }

@@ -33,7 +33,7 @@ const Signup = () => {
         }
 
         // let result = await fetch("http://localhost:5400/register", {
-        let result = await fetch(`${API_BASE}/register`, {
+        let result = await fetch(`${API_BASE}/api/register`, {
 
             method: 'POST',
             headers: { "Content-Type": "application/json" },
