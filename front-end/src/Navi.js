@@ -23,7 +23,7 @@ const Nav = () => {
         <li><Link to="/">Product</Link></li>
         <li><Link to="/add">Add Product</Link></li>
         <li><Link to="/updateprolist">Update Product</Link></li>
-        <li><Link to="/profile">Profile</Link></li>
+        {auth && <li><Link to="/profile">Profile</Link></li>}
 
         {auth ? (
           <li><Link onClick={logout} to="#">Logout</Link></li>
