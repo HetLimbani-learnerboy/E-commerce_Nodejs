@@ -1,7 +1,7 @@
 import './App.css';
 import Nav from './Navi';
 import Footer from './Footerin';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Signup from './Signup';
 import Privatecomponent from './privatecomponent';
 import Login from './Login'
