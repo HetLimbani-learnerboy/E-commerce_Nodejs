@@ -11,7 +11,7 @@ const Productlist = () => {
     const getproduct = async () => {
         try {
             // let result = await fetch("http://localhost:5400/products", {
-            let result = await fetch("/products", {
+            let result = await fetch("https://e-commerce-nodejs-lk6n.onrender.com/products", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}` 
                 }
@@ -31,7 +31,7 @@ const Productlist = () => {
     const deleteitem = async (name) => {
         try {
             // let result = await fetch(`http://localhost:5400/products/${name}`, {
-            let result = await fetch(`/products/${name}`, {
+            let result = await fetch(`https://e-commerce-nodejs-lk6n.onrender.com/products/${name}`, {
                 method: 'delete',
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}` 
@@ -52,7 +52,7 @@ const Productlist = () => {
         try {
             if (key) {
                 // let result = await fetch(`http://localhost:5400/search/${key}`, {
-                let result = await fetch(`/search/${key}`, {
+                let result = await fetch(`https://e-commerce-nodejs-lk6n.onrender.com/search/${key}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}` 
                     }

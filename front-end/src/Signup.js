@@ -32,7 +32,7 @@ const Signup = () => {
         }
 
         // let result = await fetch("http://localhost:5400/register", {
-        let result = await fetch("/register", {
+        let result = await fetch("https://e-commerce-nodejs-lk6n.onrender.com/register", {
 
             method: 'POST',
             headers: { "Content-Type": "application/json" },
