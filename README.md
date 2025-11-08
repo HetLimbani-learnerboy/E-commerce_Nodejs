@@ -98,11 +98,11 @@ Below is a sample table layout for the 8 screenshots you mentioned. Order (leftâ
 
 | Code (1) | Frontend (1) | Frontend (2) | Frontend (3) |
 |---|---|---|---|
-| ![Code screenshot](assets/images/code.png) | ![Frontend 1](assets/images/Frontend_1.png) | ![Frontend 2](assets/images/Frontend_2.png) | ![Frontend 3](assets/images/Frontend_3.png) |
+| ![Code screenshot](assets/code.png) | ![Frontend 1](assets/Frontend_1.png) | ![Frontend 2](assets/Frontend_2.png) | ![Frontend 3](assets/Frontend_3.png) |
 
 | Frontend (4) | Frontend (5) | Frontend (6) | Data storage (8) |
 |---|---|---|---|
-| ![Frontend 4](assets/images/Frontend_4.png) | ![Frontend 5](assets/images/Frontend_5.png) | ![Frontend 6](assets/images/Frontend_6.png) | ![Data storage](assets/images/datastorage.png) |
+| ![Frontend 4](assets/Frontend_4.png) | ![Frontend 5](assets/Frontend_5.png) | ![Frontend 6](assets/Frontend_6.png) | ![Data storage](assets/datastorage.png) |
 
 
 
