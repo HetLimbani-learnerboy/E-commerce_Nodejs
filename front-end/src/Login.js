@@ -14,7 +14,8 @@ const Login = () => {
     }, []);
 
     const handlelogin = async () => {
-        let result = await fetch("http://localhost:5400/login", {
+        // let result = await fetch("http://localhost:5400/login", {
+        let result = await fetch("/login", {
             method: 'post',
             body: JSON.stringify({ email, password }),
             headers: {

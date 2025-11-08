@@ -15,7 +15,8 @@ const Updateproduct = () => {
     }, []); 
 
     const getproductdetails = async () => {
-        let result = await fetch(`http://localhost:5400/products/${params.id}`, {
+        // let result = await fetch(`http://localhost:5400/products/${params.id}`, {
+        let result = await fetch(`/products/${params.id}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}` 
             }
@@ -32,7 +33,8 @@ const Updateproduct = () => {
             setError(true);
             return;
         }
-        let result = await fetch(`http://localhost:5400/products/${params.id}`, {
+        // let result = await fetch(`http://localhost:5400/products/${params.id}`, {
+        let result = await fetch(`/products/${params.id}`, {
             method: 'put',
             body: JSON.stringify({ name, price, category, company }),
             headers: {

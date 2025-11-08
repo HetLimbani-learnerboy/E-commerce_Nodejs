@@ -9,7 +9,8 @@ const Updateprolist = () => {
     }, []);
 
     const getproduct = async () => {
-        let result = await fetch("http://localhost:5400/products", {
+        // let result = await fetch("http://localhost:5400/products", {
+        let result = await fetch("/products", {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`
             }
@@ -19,7 +20,8 @@ const Updateprolist = () => {
     };
 
     const deleteitem = async (name) => {
-        let result = await fetch(`http://localhost:5400/products/${name}`, {
+        // let result = await fetch(`http://localhost:5400/products/${name}`, {
+        let result = await fetch(`/products/${name}`, {
             method: 'delete',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}` 
@@ -34,7 +36,8 @@ const Updateprolist = () => {
     const changehandle = async (event) => {
         let key = event.target.value;
         if (key) {
-            let result = await fetch(`http://localhost:5400/search/${key}`, {
+            // let result = await fetch(`http://localhost:5400/search/${key}`, {
+            let result = await fetch(`/search/${key}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}` 
                 }

@@ -32,7 +32,8 @@ const Profilepage = () => {
             }
 
             try {
-                const result = await fetch(`http://localhost:5400/profile?id=${userData._id}`, {
+                // const result = await fetch(`http://localhost:5400/profile?id=${userData._id}`, {
+                const result = await fetch(`/profile?id=${userData._id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
