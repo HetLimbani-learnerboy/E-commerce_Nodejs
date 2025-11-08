@@ -42,8 +42,10 @@ const Signup = () => {
         if (result.auth && result.user) {
             localStorage.setItem("users", JSON.stringify(result.user));
             localStorage.setItem("token", result.auth);
+            window.dispatchEvent(new Event("storage"));
             navigate('/');
-        } else {
+        }
+        else {
             alert("Registration failed. Please try again.");
         }
     };

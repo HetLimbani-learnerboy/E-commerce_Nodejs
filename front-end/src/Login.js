@@ -11,7 +11,7 @@ const Login = () => {
         if (auth) {
             navigate('/');
         }
-    },[]);
+    }, []);
 
     const handlelogin = async () => {
         let result = await fetch("http://localhost:5400/login", {
@@ -26,9 +26,10 @@ const Login = () => {
 
         if (result.auth) {
             localStorage.setItem("users", JSON.stringify(result.user));
-            localStorage.setItem("token", result.auth); 
-            navigate('/'); 
-        } else {
+            localStorage.setItem("token", result.auth);
+            window.dispatchEvent(new Event("storage"));
+            navigate('/');
+        }else {
             alert("Please check your information");
         }
     };
