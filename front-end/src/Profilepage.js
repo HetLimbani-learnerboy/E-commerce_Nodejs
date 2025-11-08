@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-const API_BASE = process.env.REACT_APP_API_UR || "";
 
 const Profilepage = () => {
     const [name, setName] = useState("");
@@ -33,8 +32,7 @@ const Profilepage = () => {
             }
 
             try {
-                // const result = await fetch(`http://localhost:5400/profile?id=${userData._id}`, {
-                const result = await fetch(`${API_BASE}/api/profile?id=${userData._id}`, {
+                const result = await fetch(`http://localhost:5400/profile?id=${userData._id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

@@ -1,5 +1,4 @@
 import React from "react";
-const API_BASE = process.env.REACT_APP_API_UR || "";
 
 const AddProducts = () => {
     const [name, setProduct] = React.useState('');
@@ -15,8 +14,7 @@ const AddProducts = () => {
         }
 
         console.warn(name, price, category, company);
-        // let result = await fetch("http://localhost:5400/addproduct", {
-        let result = await fetch(`${API_BASE}/api/addproduct`, {
+        let result = await fetch("http://localhost:5400/addproduct", {
             method: 'post',
             body: JSON.stringify({ name, price, category, company }),
             headers: {

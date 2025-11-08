@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-const API_BASE = process.env.REACT_APP_API_UR || "";
 
 const Productlist = () => {
     const [product, setProduct] = React.useState([]);
@@ -10,8 +9,7 @@ const Productlist = () => {
 
     const getproduct = async () => {
         try {
-            // let result = await fetch("http://localhost:5400/products", {
-            let result = await fetch(`${API_BASE}/api/products`, {
+            let result = await fetch("http://localhost:5400/products", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}` 
                 }
@@ -32,8 +30,7 @@ const Productlist = () => {
         let key = event.target.value;
         try {
             if (key) {
-                // let result = await fetch(`http://localhost:5400/search/${key}`, {
-                let result = await fetch(`${API_BASE}/api/search/${key}`, {
+                let result = await fetch(`http://localhost:5400/search/${key}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}` 
                     }

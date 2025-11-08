@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-const API_BASE = process.env.REACT_APP_API_UR || "";
 
 const Updateproduct = () => {
     const [name, setProduct] = React.useState('');
@@ -16,8 +15,7 @@ const Updateproduct = () => {
     }); 
 
     const getproductdetails = async () => {
-        // let result = await fetch(`http://localhost:5400/products/${params.id}`, {
-        let result = await fetch(`${API_BASE}/api//products/${params.id}`, {
+        let result = await fetch(`http://localhost:5400/products/${params.id}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}` 
             }
@@ -34,8 +32,7 @@ const Updateproduct = () => {
             setError(true);
             return;
         }
-        // let result = await fetch(`http://localhost:5400/products/${params.id}`, {
-        let result = await fetch(`${API_BASE}/api/products/${params.id}`, {
+        let result = await fetch(`http://localhost:5400/products/${params.id}`, {
             method: 'put',
             body: JSON.stringify({ name, price, category, company }),
             headers: {
