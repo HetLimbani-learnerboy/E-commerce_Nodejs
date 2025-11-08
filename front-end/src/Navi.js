@@ -13,10 +13,8 @@ const Nav = () => {
   }, []);
 
   const logout = () => {
-    localStorage.removeItem("users");
-    localStorage.removeItem("token");
+    localStorage.clear();
     setAuth(false);
-    navigate('/login');
   };
 
   return (
@@ -28,7 +26,7 @@ const Nav = () => {
         {auth && <li><Link to="/profile">Profile</Link></li>}
 
         {auth ? (
-          <li><Link onClick={logout} to="#">Logout</Link></li>
+          <li><Link onClick={logout} to="/login">Logout</Link></li>
         ) : (
           <>
             <li><Link to='/signup'>Signup</Link></li>
