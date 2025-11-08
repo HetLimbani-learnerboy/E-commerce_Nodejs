@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 const API_BASE = process.env.VITE_API_URL || "";
 
 const Productlist = () => {
@@ -26,25 +25,6 @@ const Productlist = () => {
             setProduct(data);
         } catch (error) {
             console.error("Failed to fetch products:", error);
-        }
-    };
-
-    const deleteitem = async (name) => {
-        try {
-            // let result = await fetch(`http://localhost:5400/products/${name}`, {
-            let result = await fetch(`${API_BASE}/products/${name}`, {
-                method: 'delete',
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}` 
-                }
-            });
-
-            result = await result.json();
-            if (result) {
-                getproduct();
-            }
-        } catch (error) {
-            console.error("Failed to delete product:", error);
         }
     };
 
