@@ -79,7 +79,7 @@ Notes:
 - The server expects `process.env.MONGO_URI` to be set. If you use a hosted MongoDB (Atlas), paste the connection string into the `.env` file.
 - The code uses a hard-coded JWT key variable `Jwtkey = 'ecomm'` in `Back-end/index.js`. For production, move this into your `.env` and read it via `process.env.JWT_KEY` instead.
 
-## Screenshots (place images in `assets/images/` or use URLs)
+## Screenshots (place images in `assetsedit/` or use URLs)
 
 Below is a sample table layout for the 8 screenshots you mentioned. Order (left→right, top→bottom):
 - 1: Code screenshot
