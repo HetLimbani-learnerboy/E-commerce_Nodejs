@@ -96,21 +96,13 @@ Below is a sample table layout for the 8 screenshots you mentioned. Order (leftâ
 - 2â€“7: Frontend screenshots (six images)
 - 8: Data storage / database screenshot
 
-| Code (1) | Frontend (2) | Frontend (3) | Frontend (4) |
+| Code (1) | Frontend (1) | Frontend (2) | Frontend (3) |
 |---|---|---|---|
-| ![Code screenshot](assets/images/code.png) | ![Frontend 1](assets/images/frontend1.png) | ![Frontend 2](assets/images/frontend2.png) | ![Frontend 3](assets/images/frontend3.png) |
+| ![Code screenshot](assets/images/code.png) | ![Frontend 1](assets/images/Frontend_1.png) | ![Frontend 2](assets/images/Frontend_2.png) | ![Frontend 3](assets/images/Frontend_3.png) |
 
-| Frontend (5) | Frontend (6) | Frontend (7) | Data storage (8) |
+| Frontend (4) | Frontend (5) | Frontend (6) | Data storage (8) |
 |---|---|---|---|
-| ![Frontend 4](assets/images/frontend4.png) | ![Frontend 5](assets/images/frontend5.png) | ![Frontend 6](assets/images/frontend6.png) | ![Data storage](assets/images/datastorage.png) |
+| ![Frontend 4](assets/images/Frontend_4.png) | ![Frontend 5](assets/images/Frontend_5.png) | ![Frontend 6](assets/images/Frontend_6.png) | ![Data storage](assets/images/datastorage.png) |
 
-How to use these placeholders:
-- Create the directory `assets/images/` at the repository root and add your 8 images with the filenames used above. Git will render them in the table.
-- Or replace any `assets/images/*.png` entry with a full HTTPS URL (for images hosted elsewhere) if you prefer not to commit the images to the repo.
-
-If you'd like, I can also:
-- update `Back-end/package.json` to make `npm start` run `index.js` instead of `server.js`,
-- create an example `.env.example` file,
-- or add the actual image files into `assets/images/` if you upload them or tell me their paths/filenames.
 
 
