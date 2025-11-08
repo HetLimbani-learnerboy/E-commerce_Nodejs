@@ -1,12 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Nav = () => {
-  const auth = localStorage.getItem("users");
+  const [auth, setAuth] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = localStorage.getItem("users");
+    setAuth(!!user);
+  }, []);
 
   const logout = () => {
-    localStorage.clear();
- 
+    localStorage.removeItem("users");
+    localStorage.removeItem("token");
+    setAuth(false);
+    navigate('/login');
   };
 
   return (
@@ -16,17 +24,22 @@ const Nav = () => {
         <li><Link to="/add">Add Product</Link></li>
         <li><Link to="/updateprolist">Update Product</Link></li>
         <li><Link to="/profile">Profile</Link></li>
-        {
-          auth?<li><Link onClick={logout} to='/signup'>Logout</Link></li>:<> 
-          <li><Link to='/signup'>Signup</Link></li>
-          <li><Link to='/login'>Sign In</Link></li></>
-        }
+
+        {auth ? (
+          <li><Link onClick={logout} to="#">Logout</Link></li>
+        ) : (
+          <>
+            <li><Link to='/signup'>Signup</Link></li>
+            <li><Link to='/login'>Sign In</Link></li>
+          </>
+        )}
       </ul>
     </div>
   );
 };
 
 export default Nav;
+
 
 // JSON.parse(auth).name --It is print the author or name in the navigation bar.
 //<> and </> It is known as segmental
